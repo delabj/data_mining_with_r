@@ -1,0 +1,39 @@
+---
+title: "Tutorial"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Purpose
+
+## Odds vs Probability
+
+## The Logistic Function
+
+## Assumptions
+
+### Multicollinearity
+
+## Modeling
+
+### Finding A cutoff
+
+## Evaluation
+
+### ROC Curve
+
+### Confusion Matrix
+
+#### Specificity
+#### Sensitivity
+
+### Lift Chart
+
+
+

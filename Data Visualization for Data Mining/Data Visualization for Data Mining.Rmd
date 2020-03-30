@@ -1,0 +1,34 @@
+---
+title: "Data Viz for Data Mining"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## How does it fit into data mining?
+
+## Graphs for Data Exploration
+
++ Basic Plots
+  - Line Graphs
+  - Bar Charts
+  - Scatter Plots
++ Distribution Plots
+  - Boxplots
+  - Histograms
++ Relational Plots
+  - heatmaps
+  - Scatter Plots
+  
+  
+## Basic Plots
+
+## Distribution Plots
+
+## Relational Plots
+
+

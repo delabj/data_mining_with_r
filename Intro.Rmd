@@ -18,6 +18,19 @@ library(learnr)
 
 ## Overview Of the Course
 ### Topics Covered
+This course will cover the following topics:
+
++ Overview of Data Mining
++ Using visualization for Data Mining
++ Supervised Classification
++ Unsupervised Classification
++ Regression (linear/Logistic)
++ Neural Networks
++ Decision Trees
++ K Nearest neighbors
++ Random Forests
++ Using Tidy Models
+
 ### Is this course for you? 
 
 Is this course a good fit for you? Answer these questions to find out. 
@@ -38,7 +51,7 @@ question("Are you familiar with the following?",
 question("Do you already know how to do the following in R?", 
          answer("creating models in R", message = "This will be covered"), 
          answer("classification, Regression, Neural Nets, and Association Rules" ), 
-         answer("None of these", correct = T, message = "This course may be a good fit."),
+         answer("None of these", correct = T, message = "Have no fear, these will be covered in this course."),
          type = "multiple",
          incorrect =  "This tutorial will be covering things that you're already familiar with."
          )
@@ -79,6 +92,8 @@ question("Do you already know how to do the following in R?",
 #### Imputation
 
 ### Normalization of Data
+
+## Visualization
 
 ## Modeling
 

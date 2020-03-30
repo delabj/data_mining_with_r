@@ -1,0 +1,51 @@
+---
+title: "Tutorial"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Purpose
+
+## Network Structure
+
+### Input
+
+### Output
+
+### Hidden Layer
+
+### Relationship to Linear regression
+
+## Understanding a network
+
+## Training A model
+
+### Preprocessing
+
+#### Data Normalization 
+
+### Initial Pass
+
+### Back Propagation
+
+### Why it works
+
+## Modeling
+
+### Preprocessing
+
+## Evaluation
+
+### AUC
+
+### Confusion Matrix
+
+## Things to Be aware of
+
+## Uses

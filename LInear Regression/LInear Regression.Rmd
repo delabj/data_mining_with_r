@@ -1,0 +1,50 @@
+---
+title: "Linear Regression"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Purpose
+
+## Explanitory vs Predictive modeling
+
+### Explanitory
+
+### Predictive
+
+## Assumptions
+
+## Under the Hood
+
+## Example
+
+## Modeling
+
+### Variable Selection
+
+#### Forward
+
+#### Backward
+
+#### Stepwise
+
+#### Exhaustive Search
+
+## Validation/Evaluation
+
+### Testing
+
+### Metrics 
+
+#### R squared
+
+#### Adjusted R squared
+
+
+
+

@@ -1,0 +1,94 @@
+---
+title: "Introduction To Data Mining"
+author: "Joshua de la Bruere"
+date: "3/30/2020"
+output: 
+  learnr::tutorial:
+    progressive: true
+    allow_skip: true
+runtime: shiny_prerendered
+description: "Welcome to Data Mining With R!"
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+#tutorial_options(exercise.timelimit = 60)
+```
+
+
+## Overview Of the Course
+### Topics Covered
+### Is this course for you? 
+
+Is this course a good fit for you? Answer these questions to find out. 
+
+```{r course_fit_prereq, echo = FALSE}
+question("Are you familiar with the following?", 
+         answer("data manipulation in R", correct = T, message = "* Data Manipulation is a required skill"), 
+         answer("the Tidyverse", correct = T, message = "* The Tidyverse will be used often in this course"), 
+         answer("the concept of Tidy Data", correct = T), 
+         type = "multiple", 
+         incorrect = "It looks like you're missing a few prerequisits, this course may not be a good fit."
+         )
+
+```
+
+```{r course_fit_topics, echo = FALSE}
+
+question("Do you already know how to do the following in R?", 
+         answer("creating models in R", message = "This will be covered"), 
+         answer("classification, Regression, Neural Nets, and Association Rules" ), 
+         answer("None of these", correct = T, message = "This course may be a good fit."),
+         type = "multiple",
+         incorrect =  "This tutorial will be covering things that you're already familiar with."
+         )
+```
+
+
+
+## Core Ideas in Data Mining
+
+### Variable Types
+
+### Data Gathering
+
+### Data Exploration
+
+### Data Visulization
+
+### Modeling
+
++ Supervised
++ Unsupervised
+
+### Implementation
+
+### Common Issues
+
+
+
+
+## Data Exploration and Cleaning
+
+### Detecting Outliers
+
+### Dealing With Missing Data
+
+#### Omission
+
+#### Imputation
+
+### Normalization of Data
+
+## Modeling
+
+### Supervised Learning
+
+### Unsupervised Learning
+
+### Over Sampling
+
+### Over Fitting
+
+
+

@@ -158,14 +158,14 @@ $(document).ready(function () {
 </div>
 <div id="section-core-ideas-in-data-mining" class="section level2">
 <h2>Core Ideas in Data Mining</h2>
-<div id="section-variable-types" class="section level3">
-<h3>Variable Types</h3>
-</div>
-<div id="section-data-gathering" class="section level3">
-<h3>Data Gathering</h3>
-</div>
+<p>Data Mining is a wide subject that contains many smaller subject areas. Often only the cutting edge machine learning methods are thought about, but data mining encompasess other areas of data science such as data exploration and visualization, in addition to the traditional modeling aspect of data mining.</p>
 <div id="section-data-exploration" class="section level3">
 <h3>Data Exploration</h3>
+<p>Data rarely comes in a neatly packaged data set. It’s not uncommon to have huge data sets that are derived from disparte and poorly linked data sources. These sources may be incomplete creating missing data. They may be of poor quality, with all manner of typos, and issues. <strong>Data Exploration</strong> enables you to detect these issues early as improving the quality of your data is one of the best ways to improve your ability to create a successful model. After all, if you feed your algorithim garbage, you’re likely going to get garbage back out.</p>
+<center>
+<img src="https://imgs.xkcd.com/comics/machine_learning.png" title="fig:" alt="XKCD Comic" />
+</center>
+<p>Data Exploration is a set of techniques to understand your data, what it contains, what it’s missing, and the shape and scale of the data. These techniques can be as simple as some light visualization, to as complicated as data imputation. These Topics will be explored more in depth after the overview.</p>
 </div>
 <div id="section-data-visulization" class="section level3">
 <h3>Data Visulization</h3>
@@ -188,19 +188,45 @@ $(document).ready(function () {
 <h2>Data Exploration and Cleaning</h2>
 <div id="section-detecting-outliers" class="section level3">
 <h3>Detecting Outliers</h3>
+<div id="section-what-is-an-outlier" class="section level4">
+<h4>What is an Outlier?</h4>
+<p>An <strong>Outlier</strong> is an "exteme observation, meaning that it is distant or seemingly an oddity compared to the rest of the data. Distant is purposuly vague, as distant can be different depending on the data set being worked with. They are not nessicarily an error or mistake. Sometimes, the data is truly exteme.</p>
+<p>Outliers can have a disproportianant effect on models, which can be a problem if the effect it has is not a valid conclusion.</p>
+<div id="section-example-of-suprious-outlier" class="section level5">
+<h5>Example of suprious outlier</h5>
+</div>
+<div id="section-animatedinteractive-example-of-the-effect-of-outliers" class="section level5">
+<h5>Animated/interactive example of the effect of outliers</h5>
+<p>As they can have a negitive effect, detecting outliers is an important preprocessing step in data mining, by detecting the outliers, one can take steps to either correct them (if they’re suprious), or omit them if they are negativly effecting the model. Before taking action on the outliers, it’s best to consult a domain expert, as they will often have the knoweledge to determine if it’s an error, or if the recording is correct.</p>
+<p>In some cases, detecting the outliers can be the purpose of data mining. When this is the case, it is called **Anomaly Detection". Think of airport security screening, where you might detect if someone has been making trips to strange countries, or the same countries too often. If an outlier like that exsists, they could be a potential threat or smuggling something.</p>
+</div>
+</div>
+<div id="section-methods-of-detecting-outliers" class="section level4">
+<h4>Methods of detecting outliers</h4>
+</div>
 </div>
 <div id="section-dealing-with-missing-data" class="section level3">
 <h3>Dealing With Missing Data</h3>
+<p>Sometimes, you just don’t have all the answers. Missing values are common and can cause issues with the data mining techniques you’re using.</p>
 <div id="section-omission" class="section level4">
 <h4>Omission</h4>
+<p>Dealing with missing data sometimes is a strange game, the only winning move is not to play. If the number of entries in your data set missing data are few, it can be acceptable to drop those missing data. If it appears to be many entries on a few variables you can drop those variables as well.</p>
+<p>However, if there are many observations missing many different values, omission could decimate your data set and cause you to have non useful results.</p>
 </div>
 <div id="section-imputation" class="section level4">
 <h4>Imputation</h4>
+<p>In the cases where omission isn’t practical or would be detimental to data mining, you can always try imputation; the process of replacing missing values with reasonable subsitutes. Sometimes this can be as simple as replacing the missing values with a value like the median. Domain knowledge is key here, for determining what a reasonable replacement can be.</p>
+<div id="section-example-of-imputation" class="section level5">
+<h5>Example of Imputation</h5>
+</div>
 </div>
 </div>
 <div id="section-normalization-of-data" class="section level3">
 <h3>Normalization of Data</h3>
 </div>
+</div>
+<div id="section-visualization" class="section level2">
+<h2>Visualization</h2>
 </div>
 <div id="section-modeling-1" class="section level2">
 <h2>Modeling</h2>
@@ -232,11 +258,11 @@ session$onSessionEnded(function() {
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "course_fit_prereq",     question = structure("Are you familiar with the following?", html = TRUE, class = c("html",     "character")), answers = list(structure(list(id = "lnr_ans_e1ce830",         option = "data manipulation in R", value = "data manipulation in R",         label = structure("data manipulation in R", html = TRUE, class = c("html",         "character")), correct = TRUE, message = structure("<ul>\n<li>Data Manipulation is a required skill<\u002fli>\n<\u002ful>\n", html = TRUE, class = c("html",         "character"))), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_b48101c",         option = "the Tidyverse", value = "the Tidyverse", label = structure("the Tidyverse", html = TRUE, class = c("html",         "character")), correct = TRUE, message = structure("<ul>\n<li>The Tidyverse will be used often in this course<\u002fli>\n<\u002ful>\n", html = TRUE, class = c("html",         "character"))), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_15cc155",         option = "the concept of Tidy Data", value = "the concept of Tidy Data",         label = structure("the concept of Tidy Data", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html",     "character")), try_again = structure("Try Again", html = TRUE, class = c("html",     "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html",     "character")), try_again = structure("It looks like you&#39;re missing a few prerequisits, this course may not be a good fit.", html = TRUE, class = c("html",     "character")), incorrect = structure("It looks like you&#39;re missing a few prerequisits, this course may not be a good fit.", html = TRUE, class = c("html",     "character")), message = NULL, post_message = NULL), ids = list(        answer = "course_fit_prereq-answer", question = "course_fit_prereq"),     loading = structure("<strong>Loading:<\u002fstrong> \nAre you familiar with the following?\n<br/><br/><br/>", html = TRUE, class = c("html",     "character")), random_answer_order = FALSE, allow_retry = FALSE,     seed = 1016004739.52689, options = list()), class = c("learnr_checkbox", "tutorial_question")))
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "course_fit_prereq",     question = structure("Are you familiar with the following?", html = TRUE, class = c("html",     "character")), answers = list(structure(list(id = "lnr_ans_9f4afe4",         option = "data manipulation in R", value = "data manipulation in R",         label = structure("data manipulation in R", html = TRUE, class = c("html",         "character")), correct = TRUE, message = structure("<ul>\n<li>Data Manipulation is a required skill<\u002fli>\n<\u002ful>\n", html = TRUE, class = c("html",         "character"))), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_a4bf187",         option = "the Tidyverse", value = "the Tidyverse", label = structure("the Tidyverse", html = TRUE, class = c("html",         "character")), correct = TRUE, message = structure("<ul>\n<li>The Tidyverse will be used often in this course<\u002fli>\n<\u002ful>\n", html = TRUE, class = c("html",         "character"))), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_4657d9c",         option = "the concept of Tidy Data", value = "the concept of Tidy Data",         label = structure("the concept of Tidy Data", html = TRUE, class = c("html",         "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html",     "character")), try_again = structure("Try Again", html = TRUE, class = c("html",     "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html",     "character")), try_again = structure("It looks like you&#39;re missing a few prerequisits, this course may not be a good fit.", html = TRUE, class = c("html",     "character")), incorrect = structure("It looks like you&#39;re missing a few prerequisits, this course may not be a good fit.", html = TRUE, class = c("html",     "character")), message = NULL, post_message = NULL), ids = list(        answer = "course_fit_prereq-answer", question = "course_fit_prereq"),     loading = structure("<strong>Loading:<\u002fstrong> \nAre you familiar with the following?\n<br/><br/><br/>", html = TRUE, class = c("html",     "character")), random_answer_order = FALSE, allow_retry = FALSE,     seed = 609205960.716316, options = list()), class = c("learnr_checkbox", "tutorial_question")))
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "course_fit_topics",     question = structure("Do you already know how to do the following in R?", html = TRUE, class = c("html",     "character")), answers = list(structure(list(id = "lnr_ans_d14f423",         option = "creating models in R", value = "creating models in R",         label = structure("creating models in R", html = TRUE, class = c("html",         "character")), correct = FALSE, message = structure("This will be covered", html = TRUE, class = c("html",         "character"))), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_ca31366",         option = "classification, Regression, Neural Nets, and Association Rules",         value = "classification, Regression, Neural Nets, and Association Rules",         label = structure("classification, Regression, Neural Nets, and Association Rules", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_37ff2b9",         option = "None of these", value = "None of these", label = structure("None of these", html = TRUE, class = c("html",         "character")), correct = TRUE, message = structure("Have no fear, these will be covered in this course.", html = TRUE, class = c("html",         "character"))), class = c("tutorial_question_answer",     "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html",     "character")), try_again = structure("Try Again", html = TRUE, class = c("html",     "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html",     "character")), try_again = structure("This tutorial will be covering things that you&#39;re already familiar with.", html = TRUE, class = c("html",     "character")), incorrect = structure("This tutorial will be covering things that you&#39;re already familiar with.", html = TRUE, class = c("html",     "character")), message = NULL, post_message = NULL), ids = list(        answer = "course_fit_topics-answer", question = "course_fit_topics"),     loading = structure("<strong>Loading:<\u002fstrong> \nDo you already know how to do the following in R?\n<br/><br/><br/>", html = TRUE, class = c("html",     "character")), random_answer_order = FALSE, allow_retry = FALSE,     seed = 1911875184.60971, options = list()), class = c("learnr_checkbox", "tutorial_question")))
+learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "course_fit_topics",     question = structure("Do you already know how to do the following in R?", html = TRUE, class = c("html",     "character")), answers = list(structure(list(id = "lnr_ans_e39209f",         option = "creating models in R", value = "creating models in R",         label = structure("creating models in R", html = TRUE, class = c("html",         "character")), correct = FALSE, message = structure("This will be covered", html = TRUE, class = c("html",         "character"))), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e9beca1",         option = "classification, Regression, Neural Nets, and Association Rules",         value = "classification, Regression, Neural Nets, and Association Rules",         label = structure("classification, Regression, Neural Nets, and Association Rules", html = TRUE, class = c("html",         "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer",     "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6131e00",         option = "None of these", value = "None of these", label = structure("None of these", html = TRUE, class = c("html",         "character")), correct = TRUE, message = structure("Have no fear, these will be covered in this course.", html = TRUE, class = c("html",         "character"))), class = c("tutorial_question_answer",     "tutorial_quiz_answer"))), button_labels = list(submit = structure("Submit Answer", html = TRUE, class = c("html",     "character")), try_again = structure("Try Again", html = TRUE, class = c("html",     "character"))), messages = list(correct = structure("Correct!", html = TRUE, class = c("html",     "character")), try_again = structure("This tutorial will be covering things that you&#39;re already familiar with.", html = TRUE, class = c("html",     "character")), incorrect = structure("This tutorial will be covering things that you&#39;re already familiar with.", html = TRUE, class = c("html",     "character")), message = NULL, post_message = NULL), ids = list(        answer = "course_fit_topics-answer", question = "course_fit_topics"),     loading = structure("<strong>Loading:<\u002fstrong> \nDo you already know how to do the following in R?\n<br/><br/><br/>", html = TRUE, class = c("html",     "character")), random_answer_order = FALSE, allow_retry = FALSE,     seed = 1046470339.0127, options = list()), class = c("learnr_checkbox", "tutorial_question")))
 </script>
  <!--html_preserve-->
 <script type="application/shiny-prerendered" data-context="dependencies">

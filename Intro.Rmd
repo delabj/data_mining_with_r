@@ -61,11 +61,19 @@ question("Do you already know how to do the following in R?",
 
 ## Core Ideas in Data Mining
 
-### Variable Types
+Data Mining is a wide subject that contains many smaller subject areas. Often only the cutting edge machine learning methods are thought about, but data mining encompasess other areas of data science such as  data exploration and visualization, in addition to the traditional modeling aspect of data mining. 
 
-### Data Gathering
 
 ### Data Exploration
+
+Data rarely comes in a neatly packaged data set. It's not uncommon to have huge data sets that are derived from disparte and poorly linked data sources. These sources may be incomplete creating missing data. They may be of poor quality, with all manner of typos, and issues. **Data Exploration** enables you to detect these issues early as improving the quality of your data is one of the best ways to improve your ability to create a successful model. After all, if you feed your algorithim garbage, you're likely going to get garbage back out.
+
+<center>
+![XKCD Comic](https://imgs.xkcd.com/comics/machine_learning.png)
+</center>
+
+
+Data Exploration is a set of techniques to understand your data, what it contains, what it's missing, and the shape and scale of the data. These techniques can be as simple as some light visualization, to as complicated as data imputation. These Topics will be explored more in depth after the overview.
 
 ### Data Visulization
 
@@ -85,13 +93,64 @@ question("Do you already know how to do the following in R?",
 
 ### Detecting Outliers
 
+#### What is an Outlier?
+
+An **Outlier** is an "exteme observation, meaning that it is distant or seemingly an oddity compared to the rest of the data. Distant is purposuly vague, as distant can be different depending on the data set being worked with. They are not nessicarily an error or mistake. Sometimes, the data is truly exteme.
+
+Outliers can have a disproportianant effect on models, which can be a problem if the effect it has is not a valid conclusion. 
+
+##### Example of suprious outlier
+
+##### Animated/interactive example of the effect of outliers
+
+As they can have a negitive effect, detecting outliers is an important preprocessing step in data mining, by detecting the outliers, one can take steps to either correct them (if they're suprious), or omit them if they are negativly effecting the model. Before taking action on the outliers, it's best to consult a domain expert, as they will often have the knoweledge to determine if it's an error, or if the recording is correct.
+
+In some cases, detecting the outliers can be the purpose of data mining. When this is the case, it is called **Anomaly Detection". Think of airport security screening, where you might detect if someone has been making trips to strange countries, or the same countries too often. If an outlier like that exsists, they could be a potential threat or smuggling something.  
+
+#### Methods of detecting outliers
+
 ### Dealing With Missing Data
+
+Sometimes, you just don't have all the answers. Missing values are common and can cause issues with the data mining techniques you're using. 
 
 #### Omission
 
+Dealing with missing data sometimes is a strange game, the only winning move is not to play. If the number of entries in your data set missing data are few, it can be acceptable to drop those missing data. If it appears to be many entries on a few variables you can drop those variables as well. 
+
+However, if there are many observations missing many different values, omission could decimate your data set and cause you to have non useful results. 
+
 #### Imputation
 
+In the cases where omission isn't practical or would be detimental to data mining, you can always try imputation; the process of replacing missing values with reasonable subsitutes. Sometimes this can be as simple as replacing the missing values with a value like the median. Domain knowledge is key here, for determining what a reasonable replacement can be. 
+
+
+##### Example of Imputation 
+
 ### Normalization of Data
+
+Normalizing (also known as standardizing) data is a common technique that is used when varialbes with larger scales would have undue influence over the resutls of your modeling. This is a process that will put all the varibles on the same scale. 
+
+
+This can be achived by subtracting the mean from each value and dividing by the standard deviation. 
+```{r normalizing1}
+
+
+
+norm1 <- function(var){
+  var_mean = mean(var)
+  var_std = sd(var)
+  
+  normalized_value = (x-var_mean)/var_std
+  return()
+}
+```
+
+
+Alternativly you can scale the variables from 0 to 1 by subtracting the minimum and dividing by the range.
+```{r normalizing2}
+var_mean = mean(var1)
+var_
+```
 
 ## Visualization
 

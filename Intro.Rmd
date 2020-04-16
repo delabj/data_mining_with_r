@@ -91,6 +91,32 @@ Data Exploration is a set of techniques to understand your data, what it contain
 
 ## Data Exploration and Cleaning
 
+One of the most important steps in data mining is getting to know your data. You want to have a general understanding of how the data is formed, what types of data you have, any outliers, or missing data. Knowing how dense your data is will help determine what data mining techniques you can use, as well as what sort or clean up or preprocessing you will need. 
+
+### Types of Variables
+
+Data types can be divided (with a very broad brush) into two categories, numeric and Categorical variables. Sometimes these are also refered to as qualititve and quantititave data respectivly. Most algorithms are designed around numeric data, though some can handel categorical data as well. Sometimes a transformation will be needed to turn categorical data into a numerical proxy. 
+
+#### Quantitative Data 
+Broadly speaking quantitative (numeric) data can be further broken down into continuous data and discrete data. An easy distinction here is that continous data is something that can be measured like cm, or volume. There's an infinite number of potentail values that a continous variable could be. 
+
+The other side of the quantitative coin is discrete data. Discrete data has a finite number of possible values, think for example number of students in a room, you can't have half a student, so this is a discrete number. 
+
+
+```{r continous vs discrete, echo=FALSE}
+#data
+
+```
+
+#### Quantitiative Data
+
+#### Check Your Understanding
+
+```{r data types questions,  echo = FALSE}
+
+
+```
+
 ### Detecting Outliers
 
 #### What is an Outlier?
@@ -131,38 +157,51 @@ In the cases where omission isn't practical or would be detimental to data minin
 Normalizing (also known as standardizing) data is a common technique that is used when varialbes with larger scales would have undue influence over the resutls of your modeling. This is a process that will put all the varibles on the same scale. 
 
 
-This can be achived by subtracting the mean from each value and dividing by the standard deviation. 
+This can be achived by subtracting the mean from each value and dividing by the standard deviation.
+
+$\frac{(x - \overline{x})}{s}$
+
+
+We can write a simple function that does this, just so we can see how this can be solved. 
 ```{r normalizing1}
 
+norm1 <- function(variable){
+  var_mean = mean(variable)
+  var_std = sd(variable)
 
 
-norm1 <- function(var){
-  var_mean = mean(var)
-  var_std = sd(var)
-  
-  normalized_value = (x-var_mean)/var_std
-  return()
+  normalized_values = (variable-var_mean)/var_std
+  return(normalized_values)
 }
 ```
 
 
 Alternativly you can scale the variables from 0 to 1 by subtracting the minimum and dividing by the range.
+standardized value $ = \frac{(x - min(X))}{s}$
+
+Again, we can right a function that does this for use for the whole column. 
+
 ```{r normalizing2}
-var_mean = mean(var1)
-var_
+norm2 <- function(variable){
+  var_min = min(variable)
+  var_max = max(variable)
+  var_range = var_max-var_min
+
+
+  normalized_values = (variable-var_min)/var_range
+  return(normalized_values)
+}
 ```
 
-## Visualization
 
-## Modeling
+Go ahead and try out these functions here
 
-### Supervised Learning
+```{r norm_example, exercise=TRUE}
 
-### Unsupervised Learning
+# Normalize me
+me = c(1,54,8,3,6,32,7,3,12,8,54,2,6)
+```
 
-### Over Sampling
-
-### Over Fitting
 
 
 

@@ -108,7 +108,7 @@ The other side of the quantitative coin is discrete data. Discrete data has a fi
 
 ```
 
-#### Quantitiative Data
+#### Qualititaive Data
 
 #### Check Your Understanding
 

@@ -194,7 +194,7 @@ norm2 <- function(variable){
 ```
 
 
-Go ahead and try out these functions here
+Go ahead and try out these functions here. 
 
 ```{r norm_example, exercise=TRUE}
 
